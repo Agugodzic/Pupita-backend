@@ -80,7 +80,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         cc.setExposedHeaders(Arrays.asList("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"));
         cc.setAllowedOrigins(Arrays.asList("/*"));
         cc.setAllowedMethods(Arrays.asList("GET", "POST", "OPTIONS", "PUT","PATCH"));
-        cc.addAllowedOrigin("http://localhost:4200");
+        cc.addAllowedOrigin("https://pupita-pet-shop.vercel.app");
         cc.setMaxAge(Duration.ZERO);
         cc.setAllowCredentials(Boolean.TRUE);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
