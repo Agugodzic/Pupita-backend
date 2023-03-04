@@ -22,11 +22,15 @@ public class Producto {
     private Number precio;
     private String categoria;
     private String marca;
-    @Column(length=1000)
+    @Column(length=2000000)
     private String descripcion;
     private String descripcioncorta;
+    @Column(length=2000000)
     private String imagen1;
+    @Column(length=2000000)
     private String imagen2;
+    @Column(length=2000000)
     private String imagen3;
+    @Column(length=2000000)
     private String imagen4;
 }

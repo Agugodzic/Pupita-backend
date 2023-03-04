@@ -5,7 +5,10 @@ import com.back.tienda.Service.ProductosService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 @RestController
@@ -36,8 +39,8 @@ public class ProductosController {
 
     @PutMapping("/agregar")
     public ResponseEntity<Producto> agregar(@RequestBody Producto producto){
-        Producto nuevoProducto = productosService.agregar(producto);
-        return new ResponseEntity<>(nuevoProducto,HttpStatus.OK);
+        Producto agregarProducto = productosService.editar(producto);
+        return new ResponseEntity<>(agregarProducto,HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")

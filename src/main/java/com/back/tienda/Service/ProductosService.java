@@ -2,14 +2,17 @@ package com.back.tienda.Service;
 
 import com.back.tienda.Model.Producto;
 import com.back.tienda.Repository.ProductosRepository;
+import org.hibernate.cache.spi.support.StorageAccess;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
+
 @Transactional
+@Service
 public class ProductosService {
     private final ProductosRepository productosRepository;
 
