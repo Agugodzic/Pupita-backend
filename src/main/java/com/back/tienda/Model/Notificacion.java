@@ -24,5 +24,5 @@ public class Notificacion {
   private Long user_id;
   private String api_version;
   private String action;
-  private Data data;
+  private String data;
 }
