@@ -27,7 +27,7 @@ public class NotificacionController {
         return notificacionService.listar();
     }
 
-    @PutMapping("/recibir")
+    @PostMapping("/recibir")
     public ResponseEntity<Notificacion> editar(@RequestBody Notificacion notificacion){
         Notificacion editarNotificacion = notificacionService.editar(notificacion);
         return new ResponseEntity<>(editarNotificacion,HttpStatus.OK);
