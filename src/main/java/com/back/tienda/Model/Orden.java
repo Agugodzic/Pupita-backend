@@ -16,6 +16,11 @@ public class Orden {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    public void setIdOperacionMp(String idOperacionMp) {
+        this.idOperacionMp = idOperacionMp;
+    }
+
     private String nombre;
     private String apellido;
     private String email;

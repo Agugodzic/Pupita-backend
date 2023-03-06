@@ -12,24 +12,19 @@ import java.util.List;
 @Service
 public class OrdenService {
     private final OrdenRepository ordenRepository;
-
     @Autowired
     public OrdenService(OrdenRepository ordenRepository){
         this.ordenRepository = ordenRepository;
     }
-
     public Orden agregar(Orden  orden){
         return ordenRepository.save(orden);
     }
-
     public List<Orden> listar(){
         return ordenRepository.findAll();
     }
-
     public Orden editar(Orden orden){
         return ordenRepository.save(orden);
     }
-
     public boolean eliminar(Long id){
         try{
             ordenRepository.deleteById(id);
@@ -38,7 +33,6 @@ public class OrdenService {
             return false;
         }
     }
-
     public Orden buscarPorId(Long id){
         return ordenRepository.findById(id).orElseThrow();
     }
