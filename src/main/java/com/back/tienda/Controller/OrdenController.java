@@ -42,14 +42,6 @@ public class OrdenController {
         Orden agregarOrden = ordenService.editar(orden);
         return new ResponseEntity<>(agregarOrden,HttpStatus.OK);
     }
-
-    @PostMapping("/estado/{id}")
-    public ResponseEntity<Any> estadoDePago(@RequestBody Notificacion notificacion, @PathVariable("id") Long id){
-        Orden orden = ordenService.buscarPorId(id);
-        orden.setEstadoDePago(notificacion.body);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
     @DeleteMapping("{id}")
     public String eliminarPorId(@PathVariable("id") Long id){
         boolean ok = this.ordenService.eliminar(id);
