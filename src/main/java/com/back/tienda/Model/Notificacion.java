@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Any;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +18,7 @@ public class Notificacion {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long Id;
   private Long id;
-  private Boolean live_mode;
+  private String live_mode;
   private String type;
   private String date_created;
   private Long user_id;
