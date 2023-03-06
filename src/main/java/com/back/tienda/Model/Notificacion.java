@@ -17,8 +17,6 @@ import javax.persistence.Id;
 @Entity
 public class Notificacion {
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long Id;
   private Long id;
   private String live_mode;
   private String type;
