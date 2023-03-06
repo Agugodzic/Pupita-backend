@@ -27,16 +27,10 @@ public class NotificacionController {
         return notificacionService.listar();
     }
 
-    @PutMapping("/editar")
+    @PutMapping("/recibir")
     public ResponseEntity<Notificacion> editar(@RequestBody Notificacion notificacion){
         Notificacion editarNotificacion = notificacionService.editar(notificacion);
         return new ResponseEntity<>(editarNotificacion,HttpStatus.OK);
-    }
-
-    @PutMapping("/agregar")
-    public ResponseEntity<Notificacion> agregar(@RequestBody Notificacion notificacion){
-        Notificacion nuevaNotificacion = notificacionService.agregar(notificacion);
-        return new ResponseEntity<>(nuevaNotificacion,HttpStatus.OK);
     }
 
     @DeleteMapping("{id}")
