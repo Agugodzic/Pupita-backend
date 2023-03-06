@@ -10,5 +10,5 @@ public class Notificacion {
   private Long user_id;
   private String api_version;
   private String action;
-  private Any data;
+  private String data;
 }
