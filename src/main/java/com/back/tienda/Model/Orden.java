@@ -19,16 +19,15 @@ public class Orden {
     private String nombre;
     private String apellido;
     private String email;
-    private int telefono;
+    private long telefono;
     private String ciudad;
     private String codigoPostal;
     private String direccion;
     private String pisoDepto;
-    private String estadoDePago;
-    private String estadoDeEnvio;
     private String descripcion;
     private String fecha;
     private float total;
-    private String idPreferencia;
-    private String idOperacionMp;
+    private String estadoDeEnvio;
+    private String estadoDePago;
+
 }

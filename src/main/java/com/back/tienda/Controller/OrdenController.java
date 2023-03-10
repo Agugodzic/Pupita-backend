@@ -1,14 +1,11 @@
 package com.back.tienda.Controller;
 
-import com.back.tienda.Model.Notificacion;
 import com.back.tienda.Model.Orden;
 import com.back.tienda.Service.OrdenService;
-import org.hibernate.mapping.Any;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.channels.AsynchronousByteChannel;
 import java.util.List;
 
 @RestController
@@ -37,7 +34,7 @@ public class OrdenController {
         return new ResponseEntity<>(editarOrden,HttpStatus.OK);
     }
 
-    @PutMapping("/agregar")
+    @PostMapping("/agregar")
     public ResponseEntity<Orden> agregar(@RequestBody Orden orden){
         Orden agregarOrden = ordenService.editar(orden);
         return new ResponseEntity<>(agregarOrden,HttpStatus.OK);
